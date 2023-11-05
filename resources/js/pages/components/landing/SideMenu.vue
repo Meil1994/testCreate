@@ -121,7 +121,10 @@ const closeWhatFor = () => {
 </script>
 <template>
     <div>
-        <div v-if="sideMenu" class="slide-enter absolute h-screen w-full flex">
+        <div
+            v-if="sideMenu"
+            class="slide-enter absolute h-screen w-full flex z-40"
+        >
             <div class="hidden 450px:block h-screen bg-slate-500/80 w-20%">
                 <div class="flex justify-center pt-10">
                     <button @click.prevent="closeSideMenu">

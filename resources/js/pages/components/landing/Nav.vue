@@ -104,7 +104,7 @@ const closeSideMenu = () => {
                 </ul>
             </div>
             <div
-                class="850px:col-span-1 1070px:col-span-2 flex 850px:justify-center items-center mr-10 850px:mr-0"
+                class="850px:col-span-1 1070px:col-span-2 flex 850px:justify-end items-center mr-10 850px:mr-0 900px:mr-5 950px:mr-8 980px:mr-10"
             >
                 <div class="585px:mr-4 text-xl 850px:hidden">
                     <button @click.prevent="openSideMenu">

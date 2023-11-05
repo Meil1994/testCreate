@@ -45,7 +45,7 @@ useClickOutside(innerWhatsFor, () => {
             </button>
             <div
                 id="showWhatForDiv"
-                class="absolute mt-4 overflow-hidden -ml-20 1070px:-ml-2"
+                class="absolute z-40 mt-4 overflow-hidden -ml-20 1070px:-ml-2"
             >
                 <div
                     v-if="showWhatForDiv"

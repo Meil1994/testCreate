@@ -42,7 +42,7 @@ useClickOutside(innerProductDiv, () => {
                 <span class="underline underline-offset-4">Product</span>
                 <i class="fa-regular fa-square-caret-up ml-2 text-lg"></i>
             </button>
-            <div class="absolute mt-4 overflow-hidden -ml-2">
+            <div class="absolute mt-4 overflow-hidden -ml-2 z-40">
                 <div
                     v-if="showProductDiv"
                     class="p-8 slideFromTop w-450px rounded-md ring-1 m-2 ml-1 ring-slate-300 shadow-lg bg-white"

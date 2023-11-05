@@ -1,64 +1,61 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import dashboard from "../../../../../public/images/dashboard.png";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import DashboardLogo from "../../../../../public/images/dashboard.png";
 
-const tests = ref(false);
-const quiz = ref(false);
-const exam = ref(false);
+const slides = ["tests", "exams", "quizzes"];
+const currentSlide = ref("tests");
+let intervalId = null;
+const autoSlideInterval = 5000;
 
-const dynamicWord = () => {
-    tests.value = true;
-    setTimeout(() => {
-        tests.value = false;
-        setTimeout(() => {
-            quiz.value = true;
-        }, 3000);
-    }, 3000);
+const nextSlide = () => {
+    const currentIndex = slides.indexOf(currentSlide.value);
+    currentSlide.value = slides[(currentIndex + 1) % slides.length];
+};
+
+const startAutoSlide = () => {
+    intervalId = setInterval(nextSlide, autoSlideInterval);
+};
+
+const stopAutoSlide = () => {
+    clearInterval(intervalId);
 };
 
 onMounted(() => {
-    dynamicWord();
+    startAutoSlide();
+});
+
+onBeforeUnmount(() => {
+    stopAutoSlide();
 });
 </script>
 
 <template>
     <div>
         <div
-            class="1018px:flex bg-gradient-to-r from-teal-800 to-teal-600 p-20 pt-28 pb-28"
+            class="1018px:grid grid-cols-2 bg-gradient-to-r from-teal-800 to-teal-600 p-20 pt-28 pb-28"
         >
-            <div>
+            <div class="col-span-1">
                 <p
                     class="text-center 1018px:text-start text-4xl text-white font-bold"
                 >
                     Turn your
                 </p>
-                <div class="overflow-hidden">
-                    <p
-                        v-if="tests"
-                        class="slideEnterAnimation text-center 1018px:text-start text-green-300 text-4xl font-bold"
-                    >
-                        tests
-                    </p>
-
-                    <p
-                        v-if="quiz"
-                        class="slideEnterAnimation text-center 1018px:text-start text-green-300 text-4xl font-bold"
-                    >
-                        quizzes
-                    </p>
-
-                    <p
-                        v-if="exam"
-                        class="slideEnterAnimation text-center 1018px:text-start text-green-300 text-4xl font-bold"
-                    >
-                        examanations
-                    </p>
+                <div>
+                    <div class="slider overflow-hidden">
+                        <div
+                            :key="currentSlide"
+                            class="slideFromTop text-yellow-400 text-center 1018px:text-start text-4xl"
+                            :class="{ active: currentSlide === 'tests' }"
+                        >
+                            {{ currentSlide }}
+                        </div>
+                    </div>
                 </div>
 
                 <p
                     class="text-center 1018px:text-start text-white text-4xl font-bold"
                 >
-                    into wonderfull stories
+                    into wonderful stories
                 </p>
 
                 <p
@@ -79,13 +76,14 @@ onMounted(() => {
                 </div>
             </div>
             <div
-                class="flex mt-20 1018px:mt-0 justify-center items-center ml-20"
+                class="col-span-1 flex mt-20 1018px:mt-0 justify-center items-center 1018px:ml-20"
             >
-                <img class="h-80 rounded-md" :src="dashboard" />
+                <img class="rounded-md" :src="DashboardLogo" />
             </div>
         </div>
     </div>
 </template>
+
 <style>
 @keyframes slideEnter {
     from {
@@ -96,20 +94,7 @@ onMounted(() => {
     }
 }
 
-@keyframes slideExit {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
-}
-
-.slideEnterAnimation {
+.slideFromTop {
     animation: slideEnter 0.5s forwards;
-}
-
-.slideExitAnimation {
-    animation: slideExit 0.5s forwards;
 }
 </style>
