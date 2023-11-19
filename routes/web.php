@@ -89,7 +89,10 @@ Route::post('/api/reset/password', [ForgotPasswordController::class, 'sendResetE
 Route::get('/user/update/password/{token}', [ForgotPasswordController::class, 'updatePassword']);
 Route::post('/api/update/password/{token}', [ForgotPasswordController::class, 'postReset']);
 
+
+
 Route::get('{view}', ApplicationController::class)->where('view', '(.*)')->middleware('auth');
+
 
 
 Route::fallback(function () {

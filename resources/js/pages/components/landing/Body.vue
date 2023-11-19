@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import DashboardLogo from "../../../../../public/images/dashboard.png";
+import SectionTwo from "./bodyComponents/SectionTwo.vue";
 
 const slides = ["tests", "exams", "quizzes"];
 const currentSlide = ref("tests");
@@ -36,7 +37,7 @@ onBeforeUnmount(() => {
         >
             <div class="col-span-1">
                 <p
-                    class="text-center 1018px:text-start text-4xl text-white font-bold"
+                    class="text-center 1018px:text-start text-3xl text-white font-bold"
                 >
                     Turn your
                 </p>
@@ -44,7 +45,7 @@ onBeforeUnmount(() => {
                     <div class="slider overflow-hidden">
                         <div
                             :key="currentSlide"
-                            class="slideFromTop text-yellow-400 text-center 1018px:text-start text-4xl"
+                            class="slideFromTop text-yellow-400 text-center 1018px:text-start text-3xl"
                             :class="{ active: currentSlide === 'tests' }"
                         >
                             {{ currentSlide }}
@@ -53,7 +54,7 @@ onBeforeUnmount(() => {
                 </div>
 
                 <p
-                    class="text-center 1018px:text-start text-white text-4xl font-bold"
+                    class="text-center 1018px:text-start text-white text-3xl font-bold"
                 >
                     into wonderful stories
                 </p>
@@ -74,13 +75,22 @@ onBeforeUnmount(() => {
                         >Sign up - It's free</router-link
                     >
                 </div>
+                <div>
+                    <p
+                        class="text-center 1018px:text-start mt-2 text-slate-300"
+                    >
+                        <i class="fa-solid fa-check"></i> no credit card
+                        required
+                    </p>
+                </div>
             </div>
             <div
-                class="col-span-1 flex mt-20 1018px:mt-0 justify-center items-center 1018px:ml-20"
+                class="col-span-1 hidden 548px:flex mt-20 1018px:mt-0 justify-center items-center 1018px:ml-20"
             >
                 <img class="rounded-md" :src="DashboardLogo" />
             </div>
         </div>
+        <SectionTwo />
     </div>
 </template>
 

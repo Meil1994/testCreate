@@ -9,4 +9,6 @@ class LandingController extends Controller
     public function landingPage(){
         return view('layout.landing');
     }
+
+   
 }

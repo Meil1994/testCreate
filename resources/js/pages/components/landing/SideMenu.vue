@@ -143,7 +143,7 @@ const closeWhatFor = () => {
                     </button>
                 </div>
                 <div>
-                    <img class="h-20" :src="logo" />
+                    <a href="/"><img class="h-20" :src="logo" /></a>
                 </div>
 
                 <div class="p-5 pt-0">

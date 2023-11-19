@@ -46,7 +46,7 @@ const handleSubmit = async () => {
         <div class="700px:grid 700px:grid-cols-2 h-full bg-white">
             <div class="700px:col-span-1 bg-white pt-10 pb-10">
                 <div class="flex justify-center">
-                    <img class="h-20" :src="logo" />
+                    <a href="/"><img class="h-20" :src="logo" /></a>
                 </div>
 
                 <div class="flex justify-center">

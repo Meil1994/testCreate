@@ -47,8 +47,8 @@ useClickOutside(innerProductDiv, () => {
                     v-if="showProductDiv"
                     class="p-8 slideFromTop w-450px rounded-md ring-1 m-2 ml-1 ring-slate-300 shadow-lg bg-white"
                 >
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center"
                     >
                         <i
                             class="fa-solid fa-file-circle-check text-3xl mr-4 text-green-400"
@@ -59,10 +59,10 @@ useClickOutside(innerProductDiv, () => {
                                 Create online exams, tests, and quizzes.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-regular fa-user text-3xl mr-6 text-green-400"
@@ -73,10 +73,10 @@ useClickOutside(innerProductDiv, () => {
                                 Detailed exam responses.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-solid fa-chart-pie text-3xl mr-4 text-green-400"
@@ -87,10 +87,10 @@ useClickOutside(innerProductDiv, () => {
                                 Insights through data visualization.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-solid fa-square-poll-vertical text-4xl mr-4 text-green-400"
@@ -101,10 +101,10 @@ useClickOutside(innerProductDiv, () => {
                                 Auto grading system.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-solid fa-pen-to-square text-4xl mr-3 text-green-400"
@@ -115,7 +115,7 @@ useClickOutside(innerProductDiv, () => {
                                 Dynamic test adjustments and edits.
                             </p>
                         </div>
-                    </button>
+                    </div>
                 </div>
                 <div v-if="hide">
                     <div

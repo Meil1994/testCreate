@@ -91,6 +91,7 @@ export default[
         name: 'success',
         component: Success
     },
+    
     {
         path: '/:catchAll(.*)', 
         name: 'notFound',

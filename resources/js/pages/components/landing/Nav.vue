@@ -60,6 +60,9 @@ const openSideMenu = () => {
 const closeSideMenu = () => {
     sideMenu.value = false;
     exitSideMenu.value = true;
+    setTimeout(() => {
+        exitSideMenu.value = false;
+    }, 400);
 };
 </script>
 <template>
@@ -76,7 +79,9 @@ const closeSideMenu = () => {
         >
             <div class="850px:col-span-3 pl-10 pr-10">
                 <ul class="flex items-center justify-between text-slate-700">
-                    <li><img class="h-20" :src="logo" /></li>
+                    <li>
+                        <a href="/"><img class="h-20" :src="logo" /></a>
+                    </li>
                     <li class="hidden 850px:block">
                         <Product
                             :showProductDiv="showProductDiv"

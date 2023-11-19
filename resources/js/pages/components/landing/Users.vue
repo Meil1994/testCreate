@@ -47,8 +47,8 @@ useClickOutside(innerUserDiv, () => {
                     v-if="showUserDiv"
                     class="p-8 slideFromTop w-450px rounded-md ring-1 m-2 ml-1 ring-slate-300 shadow-lg bg-white"
                 >
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center"
                     >
                         <i
                             class="fa-solid fa-building text-4xl mr-6 text-green-400"
@@ -59,10 +59,10 @@ useClickOutside(innerUserDiv, () => {
                                 Upgrade hiring process.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-solid fa-person text-4xl mr-7 text-green-400"
@@ -73,10 +73,10 @@ useClickOutside(innerUserDiv, () => {
                                 Positive students learning experience.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-solid fa-school text-3xl mr-4 text-green-400"
@@ -87,10 +87,10 @@ useClickOutside(innerUserDiv, () => {
                                 Good for online and onsite learners.
                             </p>
                         </div>
-                    </button>
+                    </div>
 
-                    <button
-                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center hover:bg-slate-200 mt-5"
+                    <div
+                        class="w-full bg-slate-100 p-2 text-slate-700 rounded-md flex items-center mt-5"
                     >
                         <i
                             class="fa-solid fa-person-breastfeeding text-4xl mr-5 text-green-400"
@@ -101,7 +101,7 @@ useClickOutside(innerUserDiv, () => {
                                 See what our children are capable of.
                             </p>
                         </div>
-                    </button>
+                    </div>
                 </div>
                 <div v-if="hide">
                     <div

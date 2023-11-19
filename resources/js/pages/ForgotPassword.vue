@@ -30,7 +30,7 @@ const submitReset = () => {
 <template>
     <div>
         <div class="flex justify-center">
-            <img class="h-28" :src="logo" />
+            <a href="/"><img class="h-16" :src="logo" /></a>
         </div>
         <form class="flex justify-center mt-20">
             <div class="ring-1 ring-slate-300 shadow-xl rounded-md w-80 mt-10">
